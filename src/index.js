@@ -1,7 +1,18 @@
 import 'dotenv/config';
+import http from 'http'; // إضافة مكتبة http لفتح المنفذ
 import { initDB }           from './db/supabase.js';
 import { startBot }         from './bot/index.js';
 import { startScheduler }   from './news/scheduler.js';
+
+// --- كود فتح المنفذ لإرضاء Render ---
+const port = process.env.PORT || 3000;
+http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Apex Bot is Live and Active!');
+}).listen(port, () => {
+  console.log(`✅ Render Port Binding successful on port ${port}`);
+});
+// -----------------------------------
 
 async function main() {
   console.log('\n╔══════════════════════════════════════════╗');
