@@ -1,5 +1,5 @@
 services:
-  - type: worker
+  - type: web
     name: apex-sovereign-bot
     env: node
     region: oregon
@@ -31,9 +31,7 @@ services:
         sync: false
       - key: BOT_LANGUAGE
         value: en
-      - key: NEWS_CHECK_INTERVAL
-        value: "30000"
       - key: MIN_IMPACT_SCORE
-        value: "7"
+        value: "5"
       - key: NODE_ENV
         value: production
