@@ -1,0 +1,22 @@
+{
+  "name": "apex-sovereign-bot",
+  "version": "3.0.0",
+  "description": "APEX Sovereign Consciousness — Institutional Forex Intelligence Bot",
+  "main": "src/index.js",
+  "type": "module",
+  "engines": { "node": ">=18.0.0" },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.36.0",
+    "openai": "^4.77.0",
+    "node-telegram-bot-api": "^0.66.0",
+    "axios": "^1.7.0",
+    "@supabase/supabase-js": "^2.43.0",
+    "node-cron": "^3.0.3",
+    "dotenv": "^16.4.5",
+    "rss-parser": "^3.13.0"
+  }
+}
